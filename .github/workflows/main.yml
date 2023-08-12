@@ -24,4 +24,4 @@ jobs:
           user-email: ${{ secrets.EMAIL }}
           target-branch: main
           commit-message: 'Update CV (auto-generated commit)'
-          target-directory: 'files/'
+          target-directory: 'files/cv/'
