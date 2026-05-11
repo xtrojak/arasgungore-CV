@@ -14,9 +14,9 @@ jobs:
       - name: filters output_temp/ to output/ using rsync (to exclude main.epub in this example)
         run:  mkdir output/ && cp cv.pdf output/
       - name: Pushes to another repository
-        uses: cpina/github-action-push-to-another-repository@main
+        uses: cpina/github-action-push-to-another-repository@v1.7.3
         env:
-          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source-directory: 'output/'
           destination-github-username: ${{ secrets.USERNAME }}
